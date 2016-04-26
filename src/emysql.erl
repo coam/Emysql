@@ -668,8 +668,8 @@ result_type(#eof_packet{})    -> eof.
 %%  Res:as_dict(Res).
 -spec as_dict(Result) -> Dict
   when
-    Result :: #result_packet{}.
-    %% Dict :: dict().
+    Result :: #result_packet{},
+    Dict :: dict:dict(). %% Dict :: dict().  // https://github.com/Feuerlabs/netlink/pull/2
 as_dict(Res) -> emysql_conv:as_dict(Res).
 
 
